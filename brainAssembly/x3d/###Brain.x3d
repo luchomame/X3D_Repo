@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN"   "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile="Full">
+<head>
+</head>
+<Scene>
+	<Viewpoint description="right" orientation="0.0 0.0 0.0  0.0" position="0.0 0.0 15.0"/>
+
+	<NavigationInfo DEF="NAV" headlight="true" type="EXAMINE" />
+
+	<ProximitySensor DEF="PS" size="10000.0 10000.0 10000.0" />
+	<Transform DEF="menu">
+		<Transform translation="0.0 0.0 -0.2">
+			<Transform translation="0.0 -0.09 0.0">
+				<Transform translation="0.0 0.0 0.0">
+					<Shape>
+						<Appearance>
+							<Material transparency="0.5"/>
+						</Appearance>
+						<IndexedFaceSet colorIndex=" 0 0 0 0" coordIndex=" 0 1 2 3">
+							<Coordinate point="-0.2 0.0 0.0, 0.2 0.0 0.0, 0.2 0.04 0.0, -0.2 0.04 0.0, "/>
+							<Color color="0.4 0.4 0.4"/>
+						</IndexedFaceSet>
+					</Shape>
+				</Transform>
+				<Transform translation="-0.066 0.028 0">
+					<Shape>
+						<Appearance>
+							<Material diffuseColor="1 1 1"/>
+						</Appearance>
+						<Text DEF="text" length="0" string="">
+							<FontStyle size="0.014"/>
+						</Text>
+					</Shape>
+				</Transform>
+				<Transform translation="-0.104 0.017 0">
+					<Shape>
+						<Appearance>
+							<Material diffuseColor="1 1 1"/>
+						</Appearance>
+						<Text DEF="subtext" length="0" string="">
+							<FontStyle size="0.009"/>
+						</Text>
+					</Shape>
+				</Transform>
+			</Transform>
+		</Transform>
+	</Transform>
+
+
+		<Transform DEF="axesHolder">
+			<Transform DEF="axes">
+				<Transform DEF="axisX">
+					<Shape>
+						<Appearance >
+							<Material diffuseColor="1.0 0.0 0.0" transparency="0.5" />
+						</Appearance>
+						<Box  size="10 0.01 0.01"/>
+					</Shape>
+					<Transform rotation="0 0 1  -1.5708" translation="5 0 0">
+						<Shape>
+							<Appearance >
+								<Material diffuseColor="1.0 0.0 0.0" transparency="0.5" />
+							</Appearance>
+							<Cone  bottomRadius="0.1" height="0.2" />
+						</Shape>
+					</Transform>
+				</Transform>
+				<Transform DEF="axisY">
+					<Shape>
+						<Appearance >
+							<Material diffuseColor="0.0 1.0 0.0" transparency="0.5" />
+						</Appearance>
+						<Box  size="0.01 10 0.01"/>
+					</Shape>
+					<Transform translation="0 5 0">
+						<Shape>
+							<Appearance >
+								<Material diffuseColor="0.0 1.0 0.0" transparency="0.5" />
+							</Appearance>
+							<Cone  bottomRadius="0.1" height="0.2" />
+						</Shape>
+					</Transform>
+				</Transform>
+				<Transform DEF="axisZ">
+					<Shape>
+						<Appearance >
+							<Material diffuseColor="0.0 0.0 1.0" transparency="0.5" />
+						</Appearance>
+						<Box  size="0.01 0.01 10"/>
+					</Shape>
+					<Transform rotation="1 0 0  1.5708" translation="0 0 5">
+						<Shape>
+							<Appearance >
+								<Material diffuseColor="0.0 0.0 1.0" transparency="0.5" />
+							</Appearance>
+							<Cone  bottomRadius="0.1" height="0.2" />
+						</Shape>
+					</Transform>
+				</Transform>
+			</Transform>
+		</Transform>
+
+	<Transform  DEF="Brain">
+		<Transform>
+			<PlaneSensor DEF="Pariet_PS" autoOffset="true" offset="0.0 -21.9 -0.242" enabled="true" maxPosition="0 -20" minPosition="0 -21.9" />
+			<TouchSensor DEF="Pariet_TS" /> 
+
+			<Transform  DEF="Pariet"  translation="0.0 -21.9 -0.242" scale="2.4 2.4 2.4" rotation="1.0 0.0 0.0  -1.57">
+				<Inline url="Pariet.x3d.gz" />
+			</Transform>
+		</Transform>
+
+		<Transform>
+			<PlaneSensor DEF="Temp_R_PS" autoOffset="true" offset="0.0 -21.9 -0.242" enabled="true" maxPosition="0 -21.9" minPosition="0 -23" />
+			<TouchSensor DEF="Temp_R_TS" /> 
+
+			<Transform  DEF="Temp_R"  translation="0.0 -21.9 -0.242" scale="2.4 2.4 2.4" rotation="1.0 0.0 0.0  -1.57">
+				<Inline url="Temp_R.x3d.gz" />
+			</Transform>
+		</Transform>
+
+		<Transform>
+			<PlaneSensor DEF="Pariet_L_PS" autoOffset="true" offset="0.0 -21.9 -0.242" enabled="true" maxPosition="0 -20" minPosition="0 -21.9" />
+			<TouchSensor DEF="Pariet_L_TS" /> 
+
+			<Transform  DEF="Pariet_L"  translation="0.0 -21.9 -0.242" scale="2.4 2.4 2.4" rotation="1.0 0.0 0.0  -1.57">
+				<Inline url="Pariet_L.x3d.gz" />			
+			</Transform>
+		</Transform>
+
+		<Transform>
+			<PlaneSensor DEF="Temp_PS" autoOffset="true" offset="0.0 -21.9 -0.242" enabled="true" maxPosition="0 -21.9" minPosition="0 -23" />
+			<TouchSensor DEF="Temp_TS" />
+
+			<Transform  DEF="Temp"  translation="0.0 -21.9 -0.242" scale="2.4 2.4 2.4" rotation="1.0 0.0 0.0  -1.57">
+				<Inline url="Temp.x3d.gz" />			
+			</Transform>
+		</Transform>
+
+		<Transform>
+			<PlaneSensor DEF="Cereb_PS" autoOffset="true" offset="0.0 -21.9 -0.242" enabled="true" maxPosition="0 -21.9" minPosition="0 -23" />
+			<TouchSensor DEF="Cereb_TS" />
+
+			<Transform  DEF="Cereb"  translation="0.0 -21.9 -0.242" scale="2.4 2.4 2.4" rotation="1.0 0.0 0.0  -1.57">
+				<Inline url="Cereb.x3d.gz" />			
+			</Transform>
+		</Transform>
+
+		<Transform>
+			<TouchSensor DEF="Stem_TS" />
+
+			<Transform  DEF="Stem"  translation="0.0 -21.9 -0.242" scale="2.4 2.4 2.4" rotation="1.0 0.0 0.0  -1.57">
+				<Inline url="Stem.x3d.gz" />
+			</Transform>
+		</Transform>
+
+		<Transform>
+			<PlaneSensor DEF="Frontal_PS" autoOffset="true" offset="0.0 -21.9 -0.242" enabled="true" maxPosition="0 -20" minPosition="0 -21.9" />
+			<TouchSensor DEF="Frontal_TS" />
+
+			<Transform  DEF="Frontal"  translation="0.0 -21.9 -0.242" scale="2.4 2.4 2.4" rotation="1.0 0.0 0.0  -1.57">
+				<Inline url="Frontal.x3d.gz" />
+			</Transform>
+		</Transform>
+
+		<Transform>
+			<PlaneSensor DEF="Frontal_R_0_PS" autoOffset="true" offset="0.0 -21.9 -0.242" enabled="true" maxPosition="0 -20" minPosition="0 -21.9" />
+			<TouchSensor DEF="Frontal_R_0_TS" /> 
+
+			<Transform  DEF="Frontal_R_0"  translation="0.0 -21.9 -0.242" scale="2.4 2.4 2.4" rotation="1.0 0.0 0.0  -1.57">
+				<Inline url="Frontal_R_0.x3d.gz" />
+			</Transform>
+		</Transform>
+	</Transform>
+
+
+
+	<Script DEF="S" directOutput="true">
+		<field accessType="initializeOnly" name="text" type="SFNode">
+			<Transform USE="text" />
+		</field>
+
+		<field accessType="initializeOnly" name="subtext" type="SFNode">
+			<Transform USE="subtext" />
+		</field>
+
+		<field accessType="initializeOnly" name="Pariet_PS" type="SFNode">
+			<Transform USE="Pariet_PS" />
+		</field>
+		<field accessType="initializeOnly" name="Pariet" type="SFNode">
+			<Transform USE="Pariet" />
+		</field>
+
+		<field accessType="initializeOnly" name="Temp_R_PS" type="SFNode">
+			<Transform USE="Temp_R_PS" />
+		</field>
+		<field accessType="initializeOnly" name="Temp_R" type="SFNode">
+			<Transform USE="Temp_R" />
+		</field>
+
+		<field accessType="initializeOnly" name="Frontal_R_0_PS" type="SFNode">
+			<Transform USE="Frontal_R_0_PS" />
+		</field>
+		<field accessType="initializeOnly" name="Frontal_R_0" type="SFNode">
+			<Transform USE="Frontal_R_0" />
+		</field>
+
+		<field accessType="initializeOnly" name="Frontal_PS" type="SFNode">
+			<Transform USE="Frontal_PS" />
+		</field>
+		<field accessType="initializeOnly" name="Frontal" type="SFNode">
+			<Transform USE="Frontal" />
+		</field>
+
+		<field accessType="initializeOnly" name="Stem" type="SFNode">
+			<Transform USE="Stem" />
+		</field>
+
+		<field accessType="initializeOnly" name="Temp_PS" type="SFNode">
+			<Transform USE="Temp_PS" />
+		</field>
+		<field accessType="initializeOnly" name="Temp" type="SFNode">
+			<Transform USE="Temp" />
+		</field>
+
+		<field accessType="initializeOnly" name="Pariet_L_PS" type="SFNode">
+			<Transform USE="Pariet_L_PS" />
+		</field>
+		<field accessType="initializeOnly" name="Pariet_L" type="SFNode">
+			<Transform USE="Pariet_L" />
+		</field>
+
+		<field accessType="initializeOnly" name="Cereb_PS" type="SFNode">
+			<Transform USE="Cereb_PS" />
+		</field>
+		<field accessType="initializeOnly" name="Cereb" type="SFNode">
+			<Transform USE="Cereb" />
+		</field>
+
+		<field accessType="inputOutput" name="displayName2" type="SFBool" />
+		<field accessType="inputOutput" name="displayName3" type="SFBool" />
+		<field accessType="inputOutput" name="displayName4" type="SFBool" />
+		<field accessType="inputOutput" name="displayName5" type="SFBool" />
+		<field accessType="inputOutput" name="displayName7" type="SFBool" />
+		<field accessType="inputOutput" name="displayName8" type="SFBool" />
+		<field accessType="inputOutput" name="displayName9" type="SFBool" />
+		<field accessType="inputOutput" name="displayName10" type="SFBool" />
+		<field accessType="inputOutput" name="displayName11" type="SFBool" />
+
+		<field accessType="inputOutput" name="move2" type="SFVec3f" />
+		<field accessType="inputOutput" name="move3" type="SFVec3f" />
+		<field accessType="inputOutput" name="move4" type="SFVec3f" />
+		<field accessType="inputOutput" name="move5" type="SFVec3f" />
+		<field accessType="inputOutput" name="move8" type="SFVec3f" />
+		<field accessType="inputOutput" name="move9" type="SFVec3f" />
+		<field accessType="inputOutput" name="move10" type="SFVec3f" />
+		<field accessType="inputOutput" name="move11" type="SFVec3f" />
+
+		### ecmascript, functional part
+		<![CDATA[javascript:
+
+			/****************************************************************************************/
+
+			function initialize() {
+			}
+
+			/****************************************************************************************/
+
+			function displayName(isOver, string, substring) {
+				if (isOver) {
+					text.string = new MFString(string);
+					subtext.string = new MFString(substring);
+				} else {
+					text.string = "";
+					subtext.string = "";
+				}
+			}
+
+			function displayName2(isOver) {
+				displayName(isOver, " Left Cerebral Hemisphere", "(Postcetral Gyrus, Parietal Lobe, Occipital Lobe & Visual Cortex)");
+			}
+
+			function displayName3(isOver) {
+				displayName(isOver, "Right Cerebral Hemisphere", "                (Temporal Lobe & Superior Temporal Gyrus)");
+			}
+
+			function displayName4(isOver) {
+				displayName(isOver, "Right Cerebral Hemisphere", "                         (Frontal Lobe & Precentral Gyrus)");
+			}
+
+			function displayName5(isOver) {
+				displayName(isOver, " Left Cerebral Hemisphere", "                         (Frontal Lobe & Precentral Gyrus)");
+			}
+
+			function displayName7(isOver) {
+				displayName(isOver, "                 Stem", "");
+			}
+
+			function displayName9(isOver) {
+				displayName(isOver, " Left Cerebral Hemisphere", "                (Temporal Lobe & Superior Temporal Gyrus)");
+			}
+
+			function displayName10(isOver) {
+				displayName(isOver, "Right Cerebral Hemisphere", "(Postcetral Gyrus, Parietal Lobe, Occipital Lobe & Visual Cortex)");
+			}
+
+			function displayName11(isOver) {
+				displayName(isOver, "            Cerebellum", "");
+			}
+
+
+			function move2(location) {
+				Pariet.translation.x = location.y - Pariet_PS.minPosition.y;
+				Pariet.translation.y = location.y;
+				Pariet.translation.z = -0.242 + Pariet_PS.minPosition.y - location.y;
+			}
+
+			function move3(location) {
+				Temp_R.translation.x = location.y - Temp_R_PS.maxPosition.y;
+				Temp_R.translation.y = location.y;
+				Temp_R.translation.z = -0.242 + Temp_R_PS.maxPosition.y - location.y;
+			}
+
+			function move4(location) {
+				Frontal_R_0.translation.x = Frontal_R_0_PS.minPosition.y - location.y;
+				Frontal_R_0.translation.y = location.y;
+				Frontal_R_0.translation.z = -0.242 + location.y - Frontal_R_0_PS.minPosition.y;
+			}
+
+			function move5(location) {
+				Frontal.translation.x = location.y - Frontal_PS.minPosition.y;
+				Frontal.translation.y = location.y;
+				Frontal.translation.z = -0.242 + location.y - Frontal_PS.minPosition.y;
+			}
+
+			function move9(location) {
+				Temp.translation.x = Temp_PS.maxPosition.y - location.y;
+				Temp.translation.y = location.y;
+				Temp.translation.z = -0.242 + Temp_PS.maxPosition.y - location.y;
+			}
+
+			function move10(location) {
+				Pariet_L.translation.x = Pariet_L_PS.minPosition.y - location.y;
+				Pariet_L.translation.y = location.y;
+				Pariet_L.translation.z = -0.242 + Pariet_L_PS.minPosition.y - location.y;
+			}
+
+			function move11(location) {
+				Cereb.translation.y = location.y;
+				Cereb.translation.z = -0.242 + location.y - Cereb_PS.maxPosition.y;
+			}
+		]]>
+
+	</Script>
+
+	<ROUTE fromNode="PS" fromField="position_changed" toNode="menu" toField="set_translation" />
+	<ROUTE fromNode="PS" fromField="orientation_changed" toNode="menu" toField="set_rotation" />
+
+	<ROUTE fromNode="Pariet_TS" fromField="isOver" toNode="S" toField="displayName2" />
+	<ROUTE fromNode="Temp_R_TS" fromField="isOver" toNode="S" toField="displayName3" />
+	<ROUTE fromNode="Frontal_R_0_TS" fromField="isOver" toNode="S" toField="displayName4" />
+	<ROUTE fromNode="Frontal_TS" fromField="isOver" toNode="S" toField="displayName5" />
+	<ROUTE fromNode="Stem_TS" fromField="isOver" toNode="S" toField="displayName7" />
+	<ROUTE fromNode="Temp_TS" fromField="isOver" toNode="S" toField="displayName9" />
+	<ROUTE fromNode="Pariet_L_TS" fromField="isOver" toNode="S" toField="displayName10" />
+	<ROUTE fromNode="Cereb_TS" fromField="isOver" toNode="S" toField="displayName11" />
+
+	<ROUTE fromNode="Pariet_PS" fromField="translation_changed" toNode="S" toField="move2" />
+	<ROUTE fromNode="Temp_R_PS" fromField="translation_changed" toNode="S" toField="move3" />
+	<ROUTE fromNode="Frontal_R_0_PS" fromField="translation_changed" toNode="S" toField="move4" />
+	<ROUTE fromNode="Frontal_PS" fromField="translation_changed" toNode="S" toField="move5" />
+	<ROUTE fromNode="Temp_PS" fromField="translation_changed" toNode="S" toField="move9" />
+	<ROUTE fromNode="Pariet_L_PS" fromField="translation_changed" toNode="S" toField="move10" />
+	<ROUTE fromNode="Cereb_PS" fromField="translation_changed" toNode="S" toField="move11" />
+</Scene>
+
+</X3D>

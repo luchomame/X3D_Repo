@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "http://www.web3d.org/specifications/x3d-3.2.dtd">
+
+<X3D profile='Immersive' version='3.2' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.2.xsd'>
+
+
+<head>
+</head>
+
+<Scene>
+
+  <Group DEF='Road'>
+<Shape>
+<!-- Road model is x=20 inches long by z=7 inches wide, with posterboard y=0.25 inches thick --> 
+<Box size='20 0.2 7'/> 
+<!-- Road surface color is grey --> 
+<Appearance DEF='GreyAppearance'>
+<Material diffuseColor='0.4 0.4 0.4'/>
+</Appearance>
+</Shape> 
+<Transform translation='0 0.2 0.3'>
+<Shape DEF='WhiteLine'>
+<Box size='20 0.01 0.4'/> 
+<Appearance DEF='WhiteAppearance'>
+<Material diffuseColor='1 1 1' emissiveColor='0.5 0.5 0.5'/>
+</Appearance>
+</Shape>
+</Transform> 
+<Transform translation='0 0.2 -0.3'>
+<Shape USE='WhiteLine'/>
+</Transform>
+</Group>
+</Scene>
+</X3D> 

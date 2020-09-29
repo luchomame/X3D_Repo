@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='BlockTower.x3d' name='title'/>
+    <meta content='Hwee Ping Ng' name='creator'/>
+    <meta content='20 August 2004' name='created'/>
+    <meta content='17 October 2004' name='modified'/>
+    <meta content='Condominum block tower.' name='description'/>
+    <meta content='https://savage.nps.edu/Savage/Buildings/ZenCondominium/BlockTower.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <!-- This NavigationInfo node is added to many scenes, making examination of objects easier. -->
+    <Transform scale='0.4 0.4 0.4' translation='-1 0.8 -3'>
+      <Group DEF='block'>
+        <Transform translation='-2.3 1.8 0'>
+          <Shape DEF='roundbeam'>
+            <Cylinder height='0.6' radius='2.3'/>
+            <Appearance>
+              <Material diffuseColor='1 0.61 0.22'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.3 3.5 0'>
+          <Shape USE='roundbeam'/>
+        </Transform>
+        <Transform translation='-2.3 7.3 0'>
+          <Shape USE='roundbeam'/>
+        </Transform>
+        <Transform translation='-2.3 9 0'>
+          <Shape USE='roundbeam'/>
+        </Transform>
+        <Transform translation='-2.3 2.75 0'>
+          <Shape DEF='roundwin'>
+            <Cylinder height='0.9' radius='2.3'/>
+            <Appearance>
+              <Material diffuseColor='1 1 0.3' transparency='0.2'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.3 8.25 0'>
+          <Shape USE='roundwin'/>
+        </Transform>
+        <Transform translation='-2.3 2.2 0'>
+          <Shape DEF='roundwinlow'>
+            <Cylinder height='0.2' radius='2.3'/>
+            <Appearance>
+              <Material diffuseColor='1 1 0.49'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.3 7.7 0'>
+          <Shape USE='roundwinlow'/>
+        </Transform>
+        <Group DEF='structure'>
+          <Group DEF='Column'>
+            <Shape DEF='beam'>
+              <Appearance>
+                <Material diffuseColor='1 0.61 0.22'/>
+              </Appearance>
+              <Box size='3.3 0.6 4'/>
+            </Shape>
+            <Group>
+              <Transform translation='0 1.8 0'>
+                <Shape USE='beam'/>
+              </Transform>
+            </Group>
+          </Group>
+          <Group DEF='window'>
+            <Transform translation='0 1 -0.1'>
+              <Shape DEF='upperwin'>
+                <Box size='1 1 3.8'/>
+                <Appearance>
+                  <Material transparency='0.2'/>
+                </Appearance>
+              </Shape>
+            </Transform>
+            <Group>
+              <Transform translation='1.1 1 -0.1'>
+                <Shape USE='upperwin'/>
+              </Transform>
+              <Transform translation='-1.1 1 -0.1'>
+                <Shape USE='upperwin'/>
+              </Transform>
+            </Group>
+            <Group>
+              <Transform translation='0 0.35 -0.1'>
+                <Shape DEF='bottomwin'>
+                  <Appearance>
+                    <Material/>
+                  </Appearance>
+                  <Box size='1 0.25 3.8'/>
+                </Shape>
+              </Transform>
+            </Group>
+            <Group>
+              <Transform translation='1.1 0.35 -0.1'>
+                <Shape USE='bottomwin'/>
+              </Transform>
+              <Transform translation='-1.1 0.35 -0.1'>
+                <Shape USE='bottomwin'/>
+              </Transform>
+            </Group>
+          </Group>
+          <Group DEF='Body'>
+            <Transform translation='-4.5 0 0'>
+              <Group USE='Column'/>
+            </Transform>
+            <Transform translation='-4.5 0 0'>
+              <Group USE='window'/>
+            </Transform>
+            <Transform translation='-4.5 1.8 0'>
+              <Group USE='window'/>
+            </Transform>
+            <Transform translation='0 1.8 0'>
+              <Group USE='window'/>
+            </Transform>
+            <Transform translation='-4.5 3.5 0'>
+              <Group USE='Column'/>
+            </Transform>
+            <Transform translation='0 3.5 0'>
+              <Group USE='Column'/>
+            </Transform>
+            <Transform translation='-4.5 3.5 0'>
+              <Group USE='window'/>
+            </Transform>
+            <Transform translation='0 3.5 0'>
+              <Group USE='window'/>
+            </Transform>
+          </Group>
+          <Group>
+            <Transform translation='1.7 1.9 0'/>
+          </Group>
+        </Group>
+        <Transform translation='0 5.5 0'>
+          <Group USE='structure'/>
+        </Transform>
+        <Transform translation='-2.3 -0.01 0'>
+          <Shape DEF='bottom'>
+            <Box size='1.3 0.63 4'/>
+            <Appearance>
+              <Material diffuseColor='1 0.61 0.22'/>
+            </Appearance>
+          </Shape>
+        </Transform>
+        <Transform translation='-2.3 10.8 -0'>
+          <Shape USE='bottom'/>
+        </Transform>
+      </Group>
+    </Transform>
+    <Transform scale='0.4 0.4 0.4' translation='-1 0.8 -1.6'>
+      <Group USE='block'/>
+    </Transform>
+    <Group DEF='test'>
+      <Transform rotation='0 1 0 3.14' scale='1 0.345 1.175' translation='-1.3 0.7 -5.3'>
+        <Inline url='result.wrl'/>
+      </Transform>
+    </Group>
+    <Transform rotation='0 1 0 3.14' translation='-3.77 0 -4.6'>
+      <Group USE='test'/>
+    </Transform>
+    <Transform translation='-3.42 2.9 -2'>
+      <Shape>
+        <Box size='0.1 4.48 1.5'/>
+      </Shape>
+    </Transform>
+    <Transform scale='0.8 0.8 0.8' translation='-3.5 0.6 0'>
+      <Group DEF='Ceiling'>
+        <Group DEF='Ceiling_Left_Front'>
+          <Transform translation='0 0 -1'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='1 0.61 0.22'/>
+              </Appearance>
+              <Extrusion convex='false' creaseAngle='0.785' crossSection='0 0 4 0 4 -1.15 4.35 -1.8 4 -2.4 4 -3.75 0 -3.75 0 -2.6 -0.35 -1.95 0 -1.25 0 0' solid='false' spine='0 0 0 0 0.1 0'/>
+            </Shape>
+          </Transform>
+        </Group>
+      </Group>
+    </Transform>
+    <Transform scale='0.8 0.8 0.8' translation='-3.5 5.17 0'>
+      <Group USE='Ceiling'/>
+    </Transform>
+  </Scene>
+</X3D>

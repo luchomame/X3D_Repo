@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0'>
+    <head>
+    </head>
+    <Scene>
+        <NavigationInfo type='"WALK"' headlight='true'/>
+        <Viewpoint description='WALKING' orientation='0 1 0 0.0' position='0 1.7 20'/>
+        <Viewpoint description='FRONT SIDE' orientation='-1 0.02 0 0.25' position='0 3 20'/>
+        <Viewpoint description='LEFT SIDE' orientation='-0.12 -0.99 -0.12 1.58' position='-20 3 0'/>
+        <Viewpoint description='BACK SIDE' orientation='-0 0.99 0.12 3.14' position='0 5 -20'/>
+        <Viewpoint description='RIGHT SIDE' orientation='-0.12 0.99 0.12 1.58' position='20 3 0'/>
+        
+        
+        <!-- Define Floow and set extrusions -->
+        <Group DEF='FLOOR'>
+            <Shape DEF='Floor'>
+                <Appearance DEF='WALL'>
+                    <ImageTexture url='"../Images/WallColorTexture.jpg"'/>
+                </Appearance>
+                <Extrusion convex='false' crossSection='-10.025 5.1 -10.025 -5.1 10.025 -5.1 10.025 5.1 -5.025 5.1 -5.025 -2.1 -10.025 -2.1' solid='false' spine='0 0.1 0 0 0.15 0'/> 
+            </Shape>
+            <Shape DEF='FLOOR_FACESET'>
+                <Appearance>
+                    <ImageTexture url='"../Images/FloorTexture.jpg"'/>
+                </Appearance>
+                <IndexedFaceSet ccw='false' convex='false' coordIndex='0 1 2 3 4 5 6'>
+                    <Coordinate point='-10.0 0.16 5 -10 0.16 -5 10.0 0.16 -5 10.0 0.16 5.0 -5.0 0.16 5.0 -5.0 0.16 -2.0 -10.0 0.16 -2.0'/>
+                </IndexedFaceSet>
+            </Shape>
+        </Group>
+        
+        
+        <!-- Define Porch -->
+        <Group>
+            <Shape DEF='PORCH'>
+                <Appearance DEF='PORCH'>
+                    <Material diffuseColor=".3 .3 .3"/>
+                </Appearance>
+                <Extrusion convex='false' crossSection='-5.025 6.025 -5.025 5.025 0 5.025 0 6.025' solid='false' spine='0 0.1 0 0 0.15 0'/> 
+            </Shape>
+            <Shape DEF='PORCH_FACESET'>
+                <Appearance>
+                    <Material diffuseColor=".8 .8 .8"/>
+                </Appearance>
+                <IndexedFaceSet ccw='false' convex='false' coordIndex='0 1 2 3'>
+                    <Coordinate point='-5 .16 6 -5 .16 5 0 .16 5 0 .16 6'/>
+                </IndexedFaceSet>
+            </Shape>
+        </Group>
+        <Group DEF='DRIVEWAY'>
+            <Shape>
+                <Appearance>
+                    <ImageTexture url='"../Images/Driveway.jpg"'/>
+                </Appearance>
+                <Extrusion convex='false' crossSection='-10 5 -10 16.00 -5 16.00 -5 5' solid='false' spine='0 0.1 0 0 0.15 0'/>
+            </Shape>
+            <Shape DEF='DRIVEWAY_FACESET'>
+                <Appearance>
+                    <ImageTexture url='"../Images/Driveway.jpg"'/>    
+                </Appearance>
+                <IndexedFaceSet ccw='false' convex='false' coordIndex='0 1 2 3'>
+                    <Coordinate point='-9.99 0.16 -2.01 -5.01 0.16 -2.01 -5.01 0.16 16.0 -9.99 0.16 16.0'/>
+                </IndexedFaceSet>
+            </Shape>
+        </Group>
+        
+        <Group DEF='WALKWAY'>
+            <Shape DEF='WALKWAY_FACESET'>
+                <Appearance>
+                    <ImageTexture url='"../Images/Driveway.jpg"'/>
+                </Appearance>
+                <IndexedFaceSet ccw='false' convex='false' coordIndex='0 1 2 3 4 5'>
+                    <Coordinate point='-5.01 0.16 8 -3.0 0.16 8 -3.0 0.16 6 -2 0.16 6 -2 0.16 9.5 -5.01 0.16 9.5'/>
+                </IndexedFaceSet>
+            </Shape>
+        </Group>
+        
+        <!-- Define LAWN -->
+        <Group DEF='LAWN'>
+            <Transform DEF='LAWN' scale='2 1 4' translation='0 0.01 0'>
+                <Transform scale='2 1 2' translation='-9 0.1 -6'>
+                    <Shape>
+                        <Appearance>
+                            <ImageTexture url='"../Images/lawnGrass.jpg"'/>
+                            <TextureTransform scale='160 80'/>
+                        </Appearance>
+                        <ElevationGrid creaseAngle='0.785' height='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0' xDimension='8' xSpacing='1.4285714' zDimension='8' zSpacing='0.7142857'/>
+                    </Shape>
+                </Transform>
+            </Transform>
+        </Group>
+        
+        
+        <!-- Define Front Walls -->
+        
+        
+        <!-- Define Walls With Door Inside -->
+        <Transform DEF='WALL_DOOR_TRANS'>
+            <Group DEF='DOOR_WALL'>
+                <Transform translation='-1 0 5'>
+                    <Group DEF='DOOR_WALL_SIDES'>
+                        <Transform DEF='DOOR_LEFT' translation='-3.0 1.15 0'>
+                            <Shape>
+                                <Appearance USE='WALL'/>
+                                <Box size='2.10 2.1 0.15'/>
+                            </Shape>
+                        </Transform>
+                        <Transform DEF='DOOR_UPPER' translation='-1.935 2.435 0'>
+                            <Shape>
+                                <Appearance USE='WALL'/>
+                                <Box size='4.225 0.49 0.15'/>
+                            </Shape>
+                        </Transform>
+                        <Transform DEF='DOOR_RIGHT' translation='-0.45 1.15 0'>
+                            <Shape>
+                                <Appearance USE='WALL'/>
+                                <Box size='1.25 2.1 0.15'/>
+                            </Shape>
+                        </Transform>
+                    </Group>
+                </Transform>
+                
+                
+                <Group DEF='DOOR'>
+                    <!-- Define Front Door -->
+                    <Transform DEF='FRONT_DOOR' translation='-2.5 1.15 5.0'>
+                        <Transform DEF='FrontDoor' center='-0.45 0 0'>
+                            <Shape>
+                                <Box size='0.9 2.1 0.1'/>
+                                <Appearance DEF='DOOR_COLOR'>
+                                    <ImageTexture url='"../Images/DoorColor.jpg"'/>
+                                </Appearance>
+                            </Shape>
+                            <Transform DEF='DOOR_KNOP1' translation='0.2 0 0.08'>
+                                <Shape DEF='DOOR_LOCK'>
+                                    <Sphere radius='0.05'/>
+                                    <Appearance DEF='DOOR_LOCK_COLOR'>
+                                        <ImageTexture DEF='DoorKnobColor' url='"Images/DoorKnobColor.jpg"'/>
+                                    </Appearance>
+                                </Shape>
+                            </Transform>
+                            <Transform DEF='DOOR_KNOP2' translation='0.2 0 -0.08'>
+                                <Shape USE='DOOR_LOCK'/>
+                            </Transform>
+                            <CylinderSensor DEF='DoorSensorFront' description='front door' maxAngle='1.57' minAngle='-1.57'/>
+                            <ROUTE fromField='rotation_changed' fromNode='DoorSensorFront' toField='set_rotation' toNode='FrontDoor'/>
+                        </Transform>
+                    </Transform>
+                </Group>
+            </Group>
+        </Transform>
+        
+        
+        <!-- Group Wall with window inside -->
+        <Transform translation='2.5 0.18 5.0'>
+            <Group DEF='WALL_WINDOW'>
+                <Group DEF='FRONT_WINDOW_WALLS'>
+                    <Transform DEF='FRONT_LOWER' translation='-1.65 0.40 0'>
+                        <Shape>
+                            <Appearance USE='WALL'/>
+                            <Box size='4.35 0.85 0.15'/>
+                        </Shape>
+                    </Transform>
+                    <Transform DEF='FRONT_LEFT' translation='-3.2 1.45 0'>
+                        <Shape>
+                            <Appearance USE='WALL'/>
+                            <Box size='1.25 1.3 0.15'/>
+                        </Shape>
+                    </Transform>
+                    <Transform DEF='FRONT_UPPER' translation='-1.65 2.3 0'>
+                        <Shape>
+                            <Appearance USE='WALL'/>
+                            <Box size='4.35 0.4 0.15'/>
+                        </Shape>
+                    </Transform>
+                    <Transform DEF='FRONT_MIDDLE' translation='-0.1 1.45 0'>
+                        <Shape>
+                            <Appearance USE='WALL'/>
+                            <Box size='1.25 1.3 0.15'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+              
+                
+                <!-- Define Group Window -->
+                <Transform translation='-1.65 0.83 0'>
+                    <Group DEF='WINDOW'>
+                        <Shape>
+                            <Appearance DEF='WINDOWFRAME'>
+                                <Material diffuseColor='.2 .2 .2'/>
+                            </Appearance>
+                            <Box size='1.85 0.06 0.06'/>
+                        </Shape>
+                        <Transform translation='0 1.24 0'>
+                            <Shape>
+                                <Appearance USE='WINDOWFRAME'/>
+                                <Box size='1.85 0.06 0.06'/>
+                            </Shape>
+                        </Transform>
+                        <Transform translation='-0.895 0.62 0'>
+                            <Shape>
+                                <Appearance USE='WINDOWFRAME'/>
+                                <Box size='0.06 1.18 0.06'/>
+                            </Shape>
+                        </Transform>
+                        <Transform translation='0.895 0.62 0'>
+                            <Shape>
+                                <Appearance USE='WINDOWFRAME'/>
+                                <Box size='0.06 1.18 0.06'/>
+                            </Shape>
+                        </Transform>
+                        <Transform translation='0 0.62 0'>
+                            <Shape>
+                                <Appearance USE='WINDOWFRAME'/>
+                                <Box size='0.06 1.18 0.06'/>
+                            </Shape>
+                        </Transform>
+                        <Transform DEF='WINDOWGLASS' translation='0 0.62 0'>
+                            <Shape>
+                                <Appearance DEF='GLASS'>
+                                    <Material emissiveColor='0.757 0.804 0.804' shininess='0.5' transparency='0.5'/>
+                                </Appearance>
+                                <Box size='1.73 1.18 0.005'/>
+                            </Shape>
+                            <Transform translation='-0.8 0.0 0.1'>
+                                <Shape DEF='window1knubopen'>
+                                    <Sphere DEF='window1Knub' radius='0.05'/>
+                                    <Appearance>
+                                        <Material />
+                                    </Appearance>
+                                </Shape>
+                            </Transform>
+                            <PlaneSensor DEF='windowSlide' description='click and drag to move windows' maxPosition='2 0.6' minPosition='0.0 0.6'/>
+                            <ROUTE fromField='translation_changed' fromNode='windowSlide' toField='set_translation' toNode='WINDOWGLASS'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+            </Group>
+        </Transform>
+        
+        <!-- 2nd floor front window -->
+        <Transform translation='2.5 2.70 5.0'>
+            <Group USE='WALL_WINDOW'/>
+        </Transform>
+        
+        <!-- USE wall window right side of front house -->
+        <Transform translation='9.5 0.18 5.0'>
+            <Group USE='WALL_WINDOW'/>
+        </Transform>
+        
+        <!-- 2nd floor same window -->
+        <Transform translation='9.5 2.70 5.0'>
+            <Group USE='WALL_WINDOW'/>
+        </Transform>
+        
+        <!-- Define box wall to fill in front house -->
+        <Transform translation='4.35 1.405 5.0'>
+            <Group DEF='DEFAULT_WALL'>
+                <Transform>
+                    <Shape>
+                        <Appearance USE='WALL'/>
+                        <Box size='2.7 2.55 0.15'/>
+                    </Shape>
+                </Transform>
+            </Group>
+        </Transform>
+        
+        <!-- 2nd floor wall between windows -->
+        <Transform translation='4.35 3.925 5.0'>
+            <Group USE='DEFAULT_WALL'/>
+        </Transform>
+        
+        <!-- 2nd floor wall above front door -->
+        <Transform translation='-3.20 3.925 5.0' scale='1.4 1 1'>
+            <Group USE='DEFAULT_WALL'/>
+        </Transform>
+        
+        <!-- Define THIN WALL for LEFT OF HOUSE -->
+        <Transform translation='-10 1.405 0'>
+            <Group DEF='THIN_WALL'>
+                <Transform>
+                    <Shape>
+                        <Appearance USE='WALL'/>
+                        <Box size='0.15 2.55 10.5'/>
+                    </Shape>
+                </Transform>
+            </Group>
+        </Transform>
+        
+        <!-- 2nd floor left wall -->
+        <Transform translation='-10 3.925 0'>
+            <Group USE='THIN_WALL'/>
+        </Transform>
+        
+        <!-- Close In the GARAGE -->
+        <Transform translation='-5 1.405 1.5' scale='1 1 0.68'>
+            <Group USE='THIN_WALL'/>
+        </Transform>
+        <Transform translation='-7.5 1.405 -2' scale='1 1 0.49' rotation='0 1 0 1.57'>
+            <Group USE='THIN_WALL'/>
+        </Transform>
+        
+        <!-- Top two but second floor -->
+        <Transform translation='-5 3.925 1.5' scale='1 1 0.68'>
+            <Group USE='THIN_WALL'/>
+        </Transform>
+        <Transform translation='-7.5 3.925 5' scale='1 1.1 0.49' rotation='0 1 0 1.57'>
+            <Group USE='THIN_WALL'/>
+        </Transform>
+        
+        
+        
+        <!-- Laundry Room -->
+        <Group DEF='INSIDE_DOOR'>
+            <Transform translation='-5 1.405 -2.55'>
+                <Group DEF='INSIDE_LEFT'>
+                    <Transform>
+                        <Shape>
+                            <Appearance USE='WALL'/>
+                            <Box size='0.15 2.55 1'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+            </Transform>
+            <Transform translation='-5 2.430 -3.55'>
+                <Group DEF='INSIDE_UPPER'>
+                    <Transform>
+                        <Shape>
+                            <Appearance USE='WALL'/>
+                            <Box size='0.15 0.5 1.1'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+            </Transform>
+            <Transform translation='-5 1.405 -4.6'>
+                <Group USE='INSIDE_LEFT'/>
+            </Transform>
+        </Group>
+        
+        <!-- inside laundry room door -->
+        <Transform translation='0 2.52 0.0'>
+            <Group USE='INSIDE_DOOR'/>
+        </Transform>
+        
+        
+        <Group DEF='FLOOR_ONE'>
+            <!-- LIVING ROOM WALL -->
+            <Transform translation='2 1.405 2.99' rotation='0 1 0 1.57' scale='1.5 1 1'>
+                <Group USE='DEFAULT_WALL'/>
+            </Transform>
+            <Transform translation='6 1.405 2.99' rotation='0 1 0 1.57' scale='1.5 1 1'>
+                <Group USE='DEFAULT_WALL'/>
+            </Transform>
+            <Transform translation='8.9 1.405 1.05' scale='.85 1 1'>
+                <Group USE='DEFAULT_WALL'/>
+            </Transform>
+        
+            <Transform translation='10 1.405 2.999' scale='1.55 1 1' rotation='0 1 0 1.57'>
+                <Group USE='DEFAULT_WALL'/>
+            </Transform>
+        
+            <Transform translation='12.08 0 3.05' rotation='0 1 0 0'>
+                <Group USE='INSIDE_DOOR'/>
+            </Transform>
+        
+            <Transform translation='2.9 0 6.05' rotation='0 1 0 -1.57'>
+                <Group USE='INSIDE_DOOR'/>
+            </Transform>
+            <Transform translation='0.0 0 6.05' rotation='0 1 0 -1.57'>
+                <Group USE='INSIDE_DOOR'/>
+            </Transform>
+            <Transform translation='9.05 0 -6.2' rotation='0 1 0 1.57'>
+                <Group USE='INSIDE_DOOR'/>
+            </Transform>
+        
+            <!-- kitchen walls -->
+            <Transform translation='5.5 0 -6.25' rotation='0 1 0 1.57'>
+                <Group USE='INSIDE_DOOR'/>
+            </Transform>
+            <Transform translation='4.2 0 -6.25' scale='1 1 1.8' rotation='0 1 0 1.57'>
+                <Group USE='INSIDE_DOOR'/>
+            </Transform>
+        
+            <!-- Outside WINDOWS -->
+            <Transform translation='10 0.18 -2.9' rotation='0 1 0 1.57'>
+                <Group USE='WALL_WINDOW'/>
+            </Transform>
+            <Transform translation='7.3 0.18 -5.05' scale='.7 1.00 1' rotation='0 1 0 3.14'>
+                <Group USE='WALL_WINDOW'/>
+            </Transform>
+            <Transform translation='3.3 0.18 -5.05' scale='1.0 1.00 1' rotation='0 1 0 3.14'>
+                <Group USE='WALL_WINDOW'/>
+            </Transform>
+            <Transform translation='-1.0 0.18 -5.05' scale='1.0 1.00 1' rotation='0 1 0 3.14'>
+                <Group USE='WALL_WINDOW'/>
+            </Transform>
+        
+            <Transform translation='10 1.405 -4.25' scale='0.65 1 1' rotation='0 1 0 1.57'>
+                <Group USE='DEFAULT_WALL'/>
+            </Transform>
+            <Transform translation='7.07 1.405 -3.52' scale='1.1 1 1' rotation='0 1 0 1.57'>
+                <Group USE='DEFAULT_WALL'/>
+            </Transform>
+            <Transform translation='3.5 1.405 -3.12' scale='1.4 1 1' rotation='0 1 0 1.57'>
+                <Group USE='DEFAULT_WALL'/>
+            </Transform>
+        
+            <Transform translation='-7.7 1.405 -5.03' scale='1.7 1 1'>
+                <Group USE='DEFAULT_WALL'/>
+            </Transform>
+        </Group>
+        
+        <Transform translation='-0.5 0 -10.03'>
+                <Group USE='DOOR_WALL'/>
+        </Transform>
+        
+        <!-- Inside Walls 2nd floor-->
+        <Transform translation='0 2.52 0'>
+            <Group USE='FLOOR_ONE'/>
+        </Transform>
+        
+        <Transform translation='-3.5 3.925 -5.0' scale='1.5 1 1'>
+            <Group USE='DEFAULT_WALL'/>
+        </Transform>
+        
+        <Transform translation='0 2.58 0'>
+            <!-- Roof -->
+            <Transform></Transform>
+            <Group DEF='ROOF'>
+                <Transform DEF='ROOF_TRANSFORM' translation='0 2.64 0' scale='1 1.1 1'>
+                    <Shape>
+                        <Appearance>
+                            <ImageTexture url='"../Images/RoofTexture.jpg"'/>
+                        </Appearance>
+                        <Extrusion convex='false' creaseAngle='0.785' crossSection='-10.525 5.6 -10.525 -5.6 10.525 -5.6 10.525 5.6 8.525 5.6 6.525 5.6 -6.525 5.6 -10.525 5.6' scale='1.0 1.0 1.01 1.01 0.01 0.01' solid='false' spine='0 0 0 0 0.2 0 0 0.8 0'/>
+                    </Shape>
+                </Transform>
+                <Shape DEF='CEILING_FACESET'>
+                    <Appearance USE='WALL'/>
+                    <IndexedFaceSet ccw='false' convex='false' coordIndex='0 1 2 3' solid='false'>
+                        <Coordinate point='-10.2 2.63 5.2 -10.2 2.63 -5.2 10.2 2.63 -5.2 10.2 2.63 5.2'/>
+                    </IndexedFaceSet>
+                </Shape>
+            </Group>
+        </Transform>
+        
+        
+        <!-- 1st floor looks like ceiling -->
+        <Group DEF='SND_FLOOR'>
+            <Shape>
+                <Appearance USE='WALL'/>
+                <IndexedFaceSet cc='false' convex='false' coordIndex='0 1 2 3' solid='false'>
+                    <Coordinate point='-10.0 2.63 5.0 -10.0 2.63 -5.0 10.0 2.63 -5.0 10.0 2.63 5.0'/>
+                </IndexedFaceSet>
+            </Shape>
+        </Group>
+        
+        <Transform translation='0 2.64 0'>
+            <!-- Define Floow and set extrusions -->
+            <Group DEF='SND_FLOOR'>
+                <Shape DEF='Floor_TWO'>
+                    <Appearance DEF='WALL_TWO'>
+                        <ImageTexture url='"../Images/WallColorTexture.jpg"'/>
+                    </Appearance>
+                    <Extrusion convex='false' crossSection='-10.0 5.0 -10.0 -5.0 10.0 -5.0 10.0 5.0 -5.0 5.0 -6.0 -5.0 -10.0 -5.0' solid='false' spine='0 0.1 0 0 0.15 0'/> 
+                </Shape>
+                <Shape DEF='FLOOR_FACESET_TWO'>
+                    <Appearance>
+                        <ImageTexture url='"../Images/FloorTexture.jpg"'/>
+                    </Appearance>
+                    <IndexedFaceSet ccw='false' convex='false' coordIndex='0 1 2 3'>
+                        <Coordinate point='-10.0 0.16 5 -10 0.16 -5 10.0 0.16 -5 10.0 0.16 5.0'/>
+                    </IndexedFaceSet>
+                </Shape>
+            </Group>
+        </Transform>
+        
+        <DirectionalLight DEF='PORCH_LANTERN' color='1 1 1' ambientIntensity='1' location='-1.00 2.25 5.5' radius='0.15'/>
+        <Transform scale='0.1 1 0.1' translation='-1.00 1.15 5.5'>
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor='0.2 0.2 0.2'/>
+                </Appearance>
+                <Cylinder/>
+            </Shape>    
+        </Transform>
+        <Transform translation='-1.00 2.25 5.5'>
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor='0.9 0.9 0.1'/>
+                </Appearance>
+                <Sphere radius='0.15'/>
+            </Shape>    
+        </Transform>
+        
+        <!-- FENCE -->
+        <Transform translation='-7 0 1'>
+            <Group DEF='FENCE_STRUCT'>
+                <Transform DEF='FENCE' translation='-5.06 1.05 -3.0'>
+                    <Transform DEF='BOTTOM' translation='0.905 -0.895 0.0'>
+                        <Shape>
+                            <Appearance DEF='BOTTOM_COLOR'>
+                                <ImageTexture DEF='woodTexture' url='"../Images/woodTexture.jpg"'/>
+                                <Material diffuseColor='1.0 0.6 0.2'/>
+                            </Appearance>
+                            <Box size='1.96 0.3 0.03'/>
+                        </Shape>
+                    </Transform>
+                    <Transform DEF='POST' translation='1.96 -0.05 0.0'>
+                        <Shape>
+                            <Appearance USE='BOTTOM_COLOR'/>
+                            <Box size='0.15 2.0 0.15'/>
+                        </Shape>
+                    </Transform>
+                    <Group DEF='FENCE1'>
+                        <Shape>
+                            <Appearance DEF='WOOD_COLOR1'>
+                                <ImageTexture USE='woodTexture'/>
+                                <Material diffuseColor='1.0 0.6 0.2'/>
+                            </Appearance>
+                            <Box size='0.16 1.5 0.05'/>
+                        </Shape>
+                        <Transform translation='0 0.749 0'>
+                            <Shape DEF='TOP1'>
+                                <Appearance USE='WOOD_COLOR1'/>
+                                <Extrusion ccw='false' crossSection='0.08 0.025 0.08 -0.025 -0.08 -0.025 -0.08 0.025 0.08 0.025' scale='1.0 1.0 0.01 1.0' solid='false' spine='0.0 0.0 0.0 0.0 0.1 0.0'/>
+                            </Shape>
+                        </Transform>
+                    </Group>
+                    <Transform translation='0.16 0.0 0.0'>
+                        <Group DEF='FENCE2'>
+                            <Shape>
+                                <Appearance DEF='WOOD_COLOR2'>
+                                    <ImageTexture USE='woodTexture'/>
+                                    <Material diffuseColor='1.0 0.585 0.2'/>
+                                </Appearance>
+                                <Box size='0.16 1.5 0.03'/>
+                            </Shape>
+                            <Transform translation='0 0.749 0'>
+                                <Shape DEF='TOP2'>
+                                    <Appearance USE='WOOD_COLOR2'/>
+                                    <Extrusion ccw='false' crossSection='0.08 0.015 0.08 -0.015 -0.08 -0.015 -0.08 0.015 0.08 0.015' scale='1.0 1.0 0.01 1.0' solid='false' spine='0.0 0.0 0.0 0.0 0.1 0.0'/>
+                                </Shape>
+                            </Transform>
+                        </Group>
+                    </Transform>
+                    <Transform translation='0.31 0.0 0.0'>
+                        <Group USE='FENCE1'/>
+                    </Transform>
+                    <Transform translation='0.46 0.0 0.0'>
+                        <Group USE='FENCE2'/>
+                    </Transform>
+                    <Transform translation='0.61 0.0 0.0'>
+                        <Group USE='FENCE1'/>
+                    </Transform>
+                    <Transform translation='0.76 0.0 0.0'>
+                        <Group USE='FENCE2'/>
+                    </Transform>
+                    <Transform translation='0.91 0.0 0.0'>
+                        <Group USE='FENCE1'/>
+                    </Transform>
+                    <Transform translation='1.06 0.0 0.0'>
+                        <Group USE='FENCE2'/>
+                    </Transform>
+                    <Transform translation='1.21 0.0 0.0'>
+                        <Group USE='FENCE1'/>
+                    </Transform>
+                    <Transform translation='1.36 0.0 0.0'>
+                        <Group USE='FENCE2'/>
+                    </Transform>
+                    <Transform translation='1.51 0.0 0.0'>
+                        <Group USE='FENCE1'/>
+                    </Transform>
+                    <Transform translation='1.66 0.0 0.0'>
+                        <Group USE='FENCE2'/>
+                    </Transform>
+                    <Transform translation='1.81 0.0 0.0'>
+                        <Group USE='FENCE1'/>
+                    </Transform>
+                </Transform>
+                <Transform DEF='FENCE_ROTATE1' center='-6.3 0.0 -3.0' rotation='0 1 0 -1.57' translation='1.09 0.0 -3.22'>
+                    <Transform USE='FENCE'/>
+                </Transform>
+                <Transform translation='0.0 0.0 -1.96'>
+                    <Transform USE='FENCE_ROTATE1'/>
+                </Transform>
+                <Transform translation='0 0 -3.92'>
+                    <Transform USE='FENCE_ROTATE1'/>
+                </Transform>
+                <Transform translation='0.0 0.0 -5.88'>
+                    <Transform USE='FENCE_ROTATE1'/>
+                </Transform>
+                <Transform translation='0.0 0.0 -7.84'>
+                    <Transform USE='FENCE_ROTATE1'/>
+                </Transform>
+                <Transform translation='0.0 0.0 -9.80'>
+                    <Transform USE='FENCE_ROTATE1'/>
+                </Transform>
+                <!-- Rotate Fence Again -->
+                <Transform DEF='FENCE_ROTATE2' center='-6.3 0.0 -6.86' rotation='0 1 0 -1.57' translation='4.95 0.0 -9.10'>
+                    <Transform USE='FENCE_ROTATE1'/>
+                </Transform>
+                <Transform translation='1.96 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='3.92 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='5.88 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='7.84 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='9.80 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='11.76 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='13.72 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='15.68 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='17.64 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='19.60 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='21.56 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='23.52 0.0 0.0'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform DEF='FENCE_ROTATE3' center='-1.5 0.0 -4.2' rotation='0 1 0 -1.57' translation='11.27 0.0 -7.00'>
+                    <Transform USE='FENCE_ROTATE2'/>
+                </Transform>
+                <Transform translation='0.0 0.0 2.07'>
+                    <Transform USE='FENCE_ROTATE3'/>
+                </Transform>
+                <Transform translation='0.00 0.0 4.11'>
+                    <Transform USE='FENCE_ROTATE3'/>
+                </Transform>
+                <Transform translation='0.00 0.0 6.15'>
+                    <Transform USE='FENCE_ROTATE3'/>
+                </Transform>
+                <Transform translation='0.00 0.0 8.19'>
+                    <Transform USE='FENCE_ROTATE3'/>
+                </Transform>
+                <Transform DEF='FENCE_ROTATE4' center='-1.5 0.0 -6.0' rotation='0 1 0 -1.57' scale='1 1 1.6' translation='7.60 0.0 -20.60'>
+                    <Transform USE='FENCE_ROTATE3'/>
+                </Transform>
+            </Group>
+        </Transform>
+    
+    </Scene>
+</X3D>

@@ -1,0 +1,219 @@
+<?
+	session_start();
+	unset($_SESSION["failedLogin"]);
+	unset($_SESSION["failedUser"]);
+	unset($_SESSION["failedEmail"]);
+?> 
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+
+body{
+background-color: gainsboro
+}  
+
+ul{
+background-color: yellow;
+list-style-type: none;
+margin:0;
+padding: 0;
+z-index:6;
+}
+
+/* Navbar stylng begins here */
+
+nav>ul {
+height: 50px;
+line-height: 50px;
+text-align: center;
+background-color: #333;
+}
+
+nav>ul>li {
+display: inline-block;
+position: relative;
+background-color: #333;
+border-radius: 5px;
+padding: 0 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+display: block;
+color: white;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input[type=text], select {
+  width: 250px;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100px;
+  background-color: #333;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #88ACFF;
+}
+
+
+
+
+/* organize the label */
+label {
+  width:100px;
+  display: inline-block;
+  text-align: left;
+}
+h1 {
+	text-align:center;
+}
+
+</style>
+<title>Upload</title>
+
+</head>
+    
+  
+<body>
+  
+    <nav>
+        <ul>
+          <li><a href="home.php">Home</a></li>
+          <li><a href="3dmodels.php?action=empty">3D Models</a></li>
+          <li><a href="manual.php">Manual</a></li>
+          <li><a href="upload.php">Upload</a></li>
+<?
+	if($_SESSION["isLogged"] == 0){
+?>
+          <li><a href="login.php">Login</a></li> 
+          <li><a href="Register.html">Register</a></li>
+
+<?
+	}else{
+?>
+		  <li><a href="signout.php">Sign Out</a></li>
+<?
+	}
+?>
+
+<?
+	if($_SESSION["isAdmin"] == 1) {
+?>
+	  <li><a href="admin.php">Admin</a></li>
+<?
+	}
+?>
+       
+		 </ul>
+         </nav>
+
+<div class="w3-container">
+  
+ 
+</div>
+
+<div class="w3-row" >
+        <div class="w3-container">
+        <div id="overlayHeader">
+                <h1>Teapot</h1>
+                <hr/>
+                <b>The teapot was invented during the Yuan Dynasty in China.<br/> It was most likely derived from<br/> 
+                ceramic kettles and wine pots.<br/> Original teapots were designed small because they were made <br/>
+                for a single person who would drink the tea directly from the spout.</b>
+
+        </div>
+    
+
+
+<div id="mainNav">
+
+    <h3>Mouse Controls</h3>
+    
+    <hr></hr>
+    
+    <div id="buttonArea">
+        <table id="mouseTable">
+        <tr id="mouseLeftRow"><td><img src="img/Mouse_Left.png"></img></td><td id="mouseLeft">Rotate</td></tr>
+        <tr id="mouseRightRow"><td><img src="img/Mouse_Right.png"></img></td><td id="mouseRight">Zoom</td></tr>
+        <tr id="mouseWheelScrollRow"><td><img src="img/Mouse_Wheel_Scroll.png"></img></td><td id="mouseWheelScroll">Zoom</td></tr>
+        <tr id="mouseWheelPressRow"><td><img src="img/Mouse_Wheel_Press.png"></img></td><td id="mouseWheelPress">Pan</td></tr>
+        </table>
+    
+        <table id="buttonTable">
+        </table>
+    </div>
+</div>
+
+<div id="nonInteractive">
+    <h3>Keyboard Controls</h3>
+    <table>
+            <tr><td><div class='key'>R</div></td><td><div class='key'>A</div></td><td><div class='key'>U</div></td></tr>
+            <tr><td>Reset view</td><td>Show all</td><td>Upright view</td></tr>
+    </table>
+</div>
+    <!--CODY YOU SHOULD BE ABLE TO DROP YOUR X3D HERE-->
+      <X3D height='900px'> 
+            <scene>
+         <inline nameSpaceName="teapot" mapDEFToID="true" url="x3d/small/Teapot.x3d" />
+            </scene>
+        </x3d>
+    </div>
+    </div>
+
+        
+
+
+    </body>
+
+</html>

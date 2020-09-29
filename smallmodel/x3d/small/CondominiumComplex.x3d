@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <head>
+    <meta content='ZenCondominium.x3d' name='title'/>
+    <meta content='The Zen' name='description'/>
+    <meta content='Ms Ng, Hwee Ping' name='creator'/>
+    <meta content='August 25, 2004' name='created'/>
+    <meta content='17 October 2004' name='modified'/>
+    <meta content='https://savage.nps.edu/Savage/Buildings/ZenCondominium/ZenCondominium.x3d' name='identifier'/>
+    <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+    <meta content='Car park shelter and walls are modified from Student Project (\\Kiska\TroyPublic\mv4204\FinalProjects\SummerFY2003\Ow)' name='reference'/>
+    <meta content='../../license.html' name='license'/>
+  </head>
+  <Scene>
+    <Transform DEF='Blocks'>
+      <Transform DEF='Backblk1' scale='7 7 7' translation='30 -7 -7'>
+        <Inline DEF='BlockTowerLink' url='"BlockTower.wrl" "../../Buildings/ZenCondominium/BlockTower.wrl" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/BlockTower.wrl" "BlockTower.x3d" "../../Buildings/ZenCondominium/BlockTower.x3d" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/BlockTower.x3d"'/>
+      </Transform>
+      <Transform DEF='Backblk2' scale='7 7 7' translation='70 -7 -7'>
+        <Inline USE='BlockTowerLink'/>
+      </Transform>
+      <Transform DEF='Leftblk1' rotation='0 1 0 1.57' scale='7 7 7' translation='-15 -7 40'>
+        <Inline USE='BlockTowerLink'/>
+      </Transform>
+      <Transform DEF='Leftblk2' rotation='0 1 0 1.57' scale='7 7 7' translation='-15 -7 5'>
+        <Inline USE='BlockTowerLink'/>
+      </Transform>
+      <Transform DEF='Rightblk1' rotation='0 1 0 -1.57' scale='7 7 7' translation='75 -7 60'>
+        <Inline USE='BlockTowerLink'/>
+      </Transform>
+      <Transform DEF='Rightblk2' rotation='0 1 0 -1.57' scale='7 7 7' translation='75 -7 20'>
+        <Inline USE='BlockTowerLink'/>
+      </Transform>
+      <Transform DEF='Frontblock1' scale='7 7 7' translation='20 -7 100'>
+        <Inline USE='BlockTowerLink'/>
+      </Transform>
+      <Transform DEF='Frontblk2' scale='7 7 7' translation='52.5 -7 100'>
+        <Inline USE='BlockTowerLink'/>
+      </Transform>
+      <Transform DEF='Frontblk3' scale='7 7 7' translation='85 -7 100'>
+        <Inline USE='BlockTowerLink'/>
+      </Transform>
+    </Transform>
+    <Transform DEF='PoolLayout' translation='30 -3.2 30'>
+      <Shape>
+        <Box size='80 1 50'/>
+        <Appearance>
+          <Material diffuseColor='0.196 0.247 0.18'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+    <Transform DEF='PoolView' scale='2 2 2' translation='10 0.5 35'>
+      <Inline url='"PoolView.wrl" "../../Buildings/ZenCondominium/PoolView.wrl" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/PoolView.wrl" "PoolView.x3d" "../../Buildings/ZenCondominium/PoolView.x3d" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/PoolView.x3d"'/>
+    </Transform>
+    <Transform DEF='KidPool' scale='2 2 2' translation='50 0.5 35'>
+      <Inline url='"KidPool.wrl" "../../Buildings/ZenCondominium/KidPool.wrl" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/KidPool.wrl" "KidPool.x3d" "../../Buildings/ZenCondominium/KidPool.x3d" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/KidPool.x3d"'/>
+    </Transform>
+    <Transform DEF='GuardRoom' translation='20 -2.2 125'>
+      <Inline url='"GuardRoom.wrl" "../../Buildings/ZenCondominium/GuardRoom.wrl" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/GuardRoom.wrl" "GuardRoom.x3d" "../../Buildings/ZenCondominium/GuardRoom.x3d" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/GuardRoom.x3d"'/>
+    </Transform>
+    <Transform DEF='Playground' scale='1.2 1.2 1.2' translation='-30 -1 75'>
+      <Inline url='"PlayGround.wrl" "../../Buildings/ZenCondominium/PlayGround.wrl" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/PlayGround.wrl" "PlayGround.x3d" "../../Buildings/ZenCondominium/PlayGround.x3d" "https://savage.nps.edu/Savage/Buildings/ZenCondominium/PlayGround.x3d"'/>
+    </Transform>
+    <Group DEF='Landscape'>
+      <Transform scale='2.5 2.5 2.5' translation='30 6 2'>
+        <Group DEF='Tree'>
+          <Transform scale='1.2 1.2 1.2' translation='19 -1.7 -4.5'>
+            <Shape DEF='HALF_TREE'>
+              <Appearance>
+                <ImageTexture url='"tree1.png" "http://www.web3D.org/TaskGroups/x3d/translation/examples/Vrml2.0Sourcebook/tree1.png" "c:\www.web3D.org\TaskGroups\x3d\translation\examples\Vrml2.0Sourcebook\Chapter17-Textures\tree1.png" "\\Kiska\TroyPublic\mv4204\FinalProjects\Summer2004\Ng\tree1.png"'/>
+              </Appearance>
+              <IndexedFaceSet coordIndex='0 1 2 3' solid='false'>
+                <Coordinate point='-1.51 0 0 1.51 0 0 1.51 3 0 -1.51 3 0'/>
+              </IndexedFaceSet>
+            </Shape>
+            <Transform rotation='0 1 0 1.57'>
+              <Shape USE='HALF_TREE'/>
+            </Transform>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform scale='2.5 2.5 2.5' translation='35 2 2'>
+        <Group USE='Tree'/>
+      </Transform>
+      <Transform scale='2.5 2.5 2.5' translation='40 2 2'>
+        <Group USE='Tree'/>
+      </Transform>
+      <Transform scale='2.5 2.5 2.5' translation='-75 2 110'>
+        <Group USE='Tree'/>
+      </Transform>
+      <Transform scale='2.5 2.5 2.5' translation='-85 2 90'>
+        <Group USE='Tree'/>
+      </Transform>
+      <Transform scale='2.5 2.5 2.5' translation='-85 2 100'>
+        <Group USE='Tree'/>
+      </Transform>
+      <Transform scale='2.5 2.5 2.5' translation='-85 2 80'>
+        <Group USE='Tree'/>
+      </Transform>
+      <Transform scale='2.5 2.5 2.5' translation='-59 2 110'>
+        <Group USE='Tree'/>
+      </Transform>
+      <Transform scale='2.5 2.5 2.5' translation='-68 2 110'>
+        <Group USE='Tree'/>
+      </Transform>
+    </Group>
+    <Transform DEF='GolfRange' translation='-25 -2.5 -5.7'>
+      <Inline url='"GolfRange.wrl" "http://MV4204\final\GolfRange.wrl" "g:\MV4204\final\GolfRange.wrl" "\\Kiska\TroyPublic\mv4204\FinalProjects\Summer2004\Ng\GolfRange.wrl"'/>
+    </Transform>
+    <Group DEF='CarparkOpen'>
+      <Transform DEF='CarparkOpenLeftFront' translation='-5 -1.5 120'>
+        <Group>
+          <Transform rotation='0 1 0 3.14'>
+            <Group DEF='Car_Park_Shelter'>
+              <Transform translation='2 0 -1.6'>
+                <Shape DEF='Pillar'>
+                  <Cylinder height='3' radius='0.2'/>
+                  <Appearance>
+                    <Material/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+              <Transform translation='-1 0 -1.6'>
+                <Shape USE='Pillar'/>
+              </Transform>
+              <Transform DEF='External_Carpark_Cover' rotation='1 0 0 -0.22' translation='0 0.1 0.3'>
+                <Group>
+                  <Transform translation='0.5 1.6 -1.6'>
+                    <Shape DEF='Shelter'>
+                      <Box size='4 0.2 2.5'/>
+                      <Appearance>
+                        <Material diffuseColor='0.9 0.3 0.1'/>
+                      </Appearance>
+                    </Shape>
+                  </Transform>
+                  <Transform translation='0.5 1.6 1.5'>
+                    <Shape USE='Shelter'/>
+                  </Transform>
+                  <Transform translation='0.5 1.6 3.5'>
+                    <Shape USE='Shelter'/>
+                  </Transform>
+                  <Transform translation='0.5 1.6 -0.5'>
+                    <Shape USE='Shelter'/>
+                  </Transform>
+                  <Transform translation='0.5 1.6 0.5'>
+                    <Shape USE='Shelter'/>
+                  </Transform>
+                </Group>
+              </Transform>
+              <Transform rotation='1 0 0 0.9' translation='-1 1 -0.6'>
+                <Shape DEF='Pillar_Diagonal_Left'>
+                  <Cylinder height='2.5' radius='0.05'/>
+                  <Appearance>
+                    <Material/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+              <Transform rotation='1 0 0 0.9' translation='2 1 -0.6'>
+                <Shape DEF='Pillar_Diagonal_Right'>
+                  <Cylinder height='2.5' radius='0.05'/>
+                  <Appearance>
+                    <Material/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+            </Group>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-4.1 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-8.2 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-12.3 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-16.4 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-20.5 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-24.6 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-28.7 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-32.8 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-36.9 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-41 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-45.1 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-49.2 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-53.3 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform DEF='CarparkOpenRightFront' translation='130 -1.5 120'>
+        <Group>
+          <Transform rotation='0 1 0 3.14'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-4.1 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-8.2 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-12.3 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-16.4 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-20.5 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-24.6 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-28.7 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-32.8 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-36.9 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-41 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-45.1 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-49.2 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-53.3 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-57.4 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-61.5 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-65.6 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-69.7 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-73.8 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-77.9 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform DEF='CarparkOpenLeft' rotation='0 1 0 -1.57' translation='-65 -1.5 125'>
+        <Group DEF='CarparkLongLink'>
+          <Transform rotation='0 1 0 3.14' translation='-12.3 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-16.4 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-20.5 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-24.6 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-28.7 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-32.8 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-36.9 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-41 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-45.1 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-49.2 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-53.3 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-57.4 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-61.5 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-65.6 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-69.7 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-73.8 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-77.9 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-82 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-86.1 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-90.2 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-94.3 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-98.4 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-102.5 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-106.6 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-110.7 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-114.8 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-118.9 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-123 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-127.1 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-131.2 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-135.3 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-139.4 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-143.5 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-147.6 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-151.7 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-155.8 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-159.9 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-164 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-168.1 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+          <Transform rotation='0 1 0 3.14' translation='-172.2 0 0'>
+            <Group USE='Car_Park_Shelter'/>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform DEF='CarparkOpenRight' rotation='0 1 0 1.57' translation='135 -1.5 -64'>
+        <Group USE='CarparkLongLink'/>
+      </Transform>
+      <Transform DEF='CarparkOpenRear' rotation='0 1 0 -3.14' translation='-65 -1.5 -54'>
+        <Group USE='CarparkLongLink'/>
+      </Transform>
+    </Group>
+    <Group DEF='GateWall'>
+      <Transform DEF='GateWallLeftFront' translation='4 -1 125'>
+        <Group>
+          <Transform>
+            <Group DEF='Wall_Gate'>
+              <Transform>
+                <Shape>
+                  <Extrusion convex='false' creaseAngle='0.785' crossSection='0 0 -1.5 0 -1.5 -1 -2 -1 -2 0 -3.5 0 -3.5 -1 -3.6 -1 -3.6 -2 0.1 -2 0.1 -1 0 -1 0 0' solid='false' spine='0 0 0 0 0 -0.5'/>
+                  <Appearance>
+                    <Material diffuseColor='1 1 0.675'/>
+                    <TextureTransform scale='2 4'/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+              <Transform rotation='0 0 1 1.57' translation='-2 -0.2 -0.25'>
+                <Shape>
+                  <Cylinder height='1.5' radius='0.1'/>
+                  <Appearance>
+                    <Material/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+              <Transform rotation='0 0 1 1.57' translation='-2 -0.6 -0.25'>
+                <Shape>
+                  <Cylinder height='1.5' radius='0.1'/>
+                  <Appearance>
+                    <Material/>
+                  </Appearance>
+                </Shape>
+              </Transform>
+            </Group>
+          </Transform>
+          <Transform translation='-3.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-7 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-10.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-13.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-17 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-20.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-24 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-27.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-31 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-34.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-38 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-41.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-45 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-48.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-52 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-55.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-59 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-62.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-66 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-69.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform DEF='GateWallRightFront' translation='139 -1 125'>
+        <Group>
+          <Transform>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-3.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-7 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-10.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-13.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-17 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-20.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-24 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-27.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-31 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-34.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-38 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-41.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-45 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-48.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-52 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-55.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-59 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-62.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-66 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-69.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-73 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-76.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-80 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-83.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-87 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-90.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-94 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-97.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-101 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-104.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform DEF='GateWallLeft' rotation='0 1 0 1.57' translation='-69 -1 -57'>
+        <Group DEF='Left_Wall'>
+          <Transform>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-3.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-7 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-10.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-13.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-17 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-20.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-24 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-27.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-31 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-34.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-38 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-41.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-45 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-48.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-52 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-55.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-59 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-62.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-66 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-69.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-73 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-76.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-80 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-83.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-87 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-90.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-94 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-97.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-101 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-104.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-108 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-111.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-115 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-118.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-122 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-125.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-129 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-132.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-136 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-139.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-143 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-146.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-150 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-153.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-157 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-160.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-164 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-167.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-171 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-174.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-178 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform DEF='GateWallRight' rotation='0 1 0 -1.57' translation='139 -1 125'>
+        <Group USE='Left_Wall'/>
+      </Transform>
+      <Transform DEF='GateWallRear' rotation='0 1 0 -3.14' translation='-69 -1 -57'>
+        <Group>
+          <Transform>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-3.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-7 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-10.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-13.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-17 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-20.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-24 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-27.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-31 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-34.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-38 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-41.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-45 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-48.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-52 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-55.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-59 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-62.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-66 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-69.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-73 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-76.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-80 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-83.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-87 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-90.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-94 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-97.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-101 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-104.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-108 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-111.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-115 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-118.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-122 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-125.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-129 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-132.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-136 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-139.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-143 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-146.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-150 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-153.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-157 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-160.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-164 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-167.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-171 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-174.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-178 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-181.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-185 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-188.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-192 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-195.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-199 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-202.5 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+          <Transform translation='-205 0 0'>
+            <Group USE='Wall_Gate'/>
+          </Transform>
+        </Group>
+      </Transform>
+    </Group>
+    <Group DEF='GndTwinRegency'>
+      <Transform translation='32 -3 34'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0 .7 0'/>
+          </Appearance>
+          <Box size='160 0.5 140'/>
+        </Shape>
+      </Transform>
+      <Transform translation='35 -3.5 33.5'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='0.227 0.188 0.227'/>
+          </Appearance>
+          <Box size='210 1 182'/>
+        </Shape>
+      </Transform>
+    </Group>
+    
+  </Scene>
+</X3D>

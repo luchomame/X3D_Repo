@@ -1,0 +1,27 @@
+h1,h2
+{
+    text-align:center;
+}
+
+#h1line
+{
+    border-color: black;
+}
+
+table
+{
+ background-color: lightgray;
+ border: 1px solid black;
+ margin: 0px auto;
+ width: 75%;
+}
+
+.center
+{
+    align-content: center;
+}
+
+body
+{
+    font-family: "Lucida Console";
+}

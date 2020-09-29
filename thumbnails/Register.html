@@ -1,0 +1,223 @@
+<html>
+<head>
+
+</head>
+   <link href="styles.css" rel="stylesheet" type="text/css"> 
+    <style>
+body{background-color: gainsboro}  
+ul {
+background-color: yellow;
+list-style-type: none;
+margin:0;
+padding: 0;
+z-index:6;
+}
+
+/* Navbar stylng begins here */
+
+nav>ul {
+height: 50px;
+line-height: 50px;
+text-align: center;
+background-color: #333;
+}
+
+/*nav>ul>li {
+display: inline-block;
+position: relative;
+background-color: #333;
+border-radius: 5px;
+padding: 0 20px;
+}*/
+nav>ul>li{
+display: inline-block;
+position: relative;
+background-color: #333;
+border-radius: 5px;
+padding: 0 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+display: block;
+color: white;
+}
+
+nav ul li a:hover {
+color: 88ACFF;
+}
+body {font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+
+</style>
+  
+<body>
+  
+    <nav>
+        <ul>
+          <li><a href="home.php">Home</a></li>
+          <li><a href="3dmodels.php?action=empty">3D Models</a></li>
+          <li><a href="manual.php">Manual</a></li>
+          <li><a href="upload.php">Upload</a></li>
+          <li><a href="login.php">Login</a></li> 
+		  <li><a href="Register.html">Register</a></li>
+        </ul>
+         </nav>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+<body>
+<title>Register</title>
+<h1><i><center>Register<center></i></h1>
+
+
+        
+<html>
+<style>
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 50%; /* modified */
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #333;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 57%; /* new width */
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+    background-color: #88ACFF;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+}
+/* organize the label */
+label {
+  width:100px;
+  display: inline-block;
+  text-align: left;
+}
+
+</style>
+<body>
+
+<form action="RegisterUsers.php" method="post">
+
+
+  <div class="container">
+	<label for="fname"><b>First Name</b></label>
+	<input type="text" pattern="[.a-zA-Z-_ ]{1,12}" 
+	placeholder="Enter first name" name="fname" required>
+	<br/>
+	<label for="lname"><b>Last Name</b></label>
+	<input type="text" pattern="[.a-zA-Z-_ ]{1,12}"
+	placeholder="Enter last name" name="lname" required>
+	<br/>
+	<label for="email"><b>Email</b></label>
+	<input type="text" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z0-9]{1,}.[a-zA-Z0-9]{2,3}" 
+	placeholder="Enter an email" name="email" title="Please enter a valid email" required>
+	<br/>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" pattern="[a-zA-Z0-9]{8,12}" 
+		name="uname" title="Must be 8-12 characters" required>
+	<br/>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" pattern="[a-zA-Z0-9]{8,12}" 
+		title="Must be 8-12 characters" name="psw" required>
+	<br/>
+    <button type="submit">Register</button>
+    <!-- Don't need
+	label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label-->
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+
+    <!--Don't need 
+	span class="psw">Forgot <a href="#">password?</a></span-->
+  </div>
+</form>
+    
+</body>
+</html>
+
+
+        
+
+

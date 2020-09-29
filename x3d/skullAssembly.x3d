@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile="Immersive" version="3.0">
+<head />
+<Scene>
+	<WorldInfo info='"VRML2.0 created with Version 1.19, from Alias|Wavefront Maya 2.0"' title="skull_test1">
+	</WorldInfo>
+	<NavigationInfo DEF="_NavigationInfo" type='"EXAMINE","ANY"'>
+	</NavigationInfo>
+	<Background DEF="_Background" groundAngle='20' groundColor='0 0 1,1 1 1' backUrl='""' bottomUrl='""' skyAngle='10,60' skyColor='0 0 0,0 0 0,0 0 0'>
+	</Background>
+	<Inline url="skullAssembly.x3d.gz" />
+</Scene>
+</X3D>

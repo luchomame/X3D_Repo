@@ -1,0 +1,120 @@
+<?
+session_start();
+?> 
+<html>
+<head>
+        <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+        <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'/>
+</head>
+   
+<title>Upload Successful</title>
+   
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+     background-color: #FAFAFA;
+        margin:0;
+        padding:0;
+ } 
+ 
+ 
+        
+/* Navbar styling begins here */
+
+nav>ul {
+height: 50px;
+line-height: 50px;
+text-align: center;
+background-color: #333;
+}
+
+/*nav>ul>li {
+display: inline-block;
+position: relative;
+background-color: #333;
+border-radius: 5px;
+padding: 0 20px;
+}*/
+nav>ul>li{
+display: inline-block;
+position: relative;
+background-color: #333;
+border-radius: 5px;
+padding: 0 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+display: block;
+color: white;
+}
+
+nav ul li a:hover {
+color: 88ACFF;
+}
+body {font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+
+</style>
+  
+<body>
+<?php
+	$myfile = fopen("admin.txt", "a") or die("unable to open file!");
+        fwrite($myfile, "Model Name: ".$_POST['Mname']."\n");
+        fwrite($myfile, "Keywords: ".$_POST['keywords']."\n");
+        fwrite($myfile, "Category: ".$_POST['categories']."\n");
+        fwrite($myfile, "Path: ".$_FILES['fileToUpload']['tmp_name']."\n\n\n");
+
+?>  
+    <nav>
+        <ul>
+          <li><a href="home.php">Home</a></li>
+          <li><a href="3dmodels.php">3D Models</a></li>
+          <li><a href="manual.php">Manual</a></li>
+          <li><a href="upload.php">Upload</a></li>
+<?
+	if($_SESSION["isLogged"] == 0){
+?>
+          <li><a href="login.php">Login</a></li> 
+          <li><a href="Register.html">Register</a></li>
+
+<?
+	}else{
+?>
+		  <li><a href="signout.php">Sign Out</a></li>
+<?
+	}
+?>
+
+<?
+	if($_SESSION["isAdmin"] == 1) {
+?>
+	  <li><a href="admin.php">Admin</a></li>
+<?
+	}
+?>	
+
+	</ul>
+      </nav>
+	  
+	  <h1><i><center>Upload Successful<center></i></h1>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+
+
+        
+
+

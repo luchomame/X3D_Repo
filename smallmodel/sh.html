@@ -1,0 +1,249 @@
+<html>
+<head>
+        <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+        <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'/>
+</head>
+<title>Capstone: Project 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body{
+     background-color: #b38b6d;
+        margin:0;
+        padding:0;
+
+ }
+        
+.grid-container {
+  display: grid;
+  justify-content: end;
+  grid-template-columns: 100px 100px 100px; /*Make the grid smaller than the container*/
+  grid-gap: 40px;
+  background-color: #b38b6d;
+  padding: 10px;
+    
+}
+
+.grid-container > div {
+  background-color: #b38b6d(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+    
+}
+#overlayHeader {
+        position:absolute;
+        z-index:5;
+        top:150px;
+        left:25px;
+        padding:5px;
+        color:#FFF;
+        background-color:#000;
+        opacity:0.5;
+    }
+    
+    #nonInteractive {
+        position:absolute;
+        left:50px;
+        bottom:40px;
+        padding:20px;
+        background-color:#EEE;
+        border:1px solid silver;
+        z-index:5;
+        opacity:0.8;
+    }
+    
+    #mainNav {
+        position:absolute;
+        right:50px;
+        top:150px;
+        width:300px;
+        background-color:#EEE;
+        border:1px solid silver;
+        padding:20px;
+        z-index:5;
+        opacity:0.8;
+    }
+    
+    .key {
+        background-image: url(img/Keyboard_Button.png);
+        width:30px;
+        height:30px;
+        padding:15px;
+        font-size:17px;
+        font-weight:bold;
+        text-align:center;
+        margin-right:10px;
+    }
+    ul {
+background-color: yellow;
+list-style-type: none;
+margin:0;
+padding: 0;
+z-index:6;
+}
+
+li{
+background-color: red;
+margin:0;
+padding: 0;
+z-index:6;
+}
+
+nav>ul {
+height: 50px;
+line-height: 50px;
+text-align: center;
+background-color: #333;
+}
+
+nav>ul>li {
+display: inline-block;
+position: relative;
+background-color: #333;
+border-radius: 5px;
+padding: 0 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+display: block;
+color: white;
+}
+
+nav ul li a:hover {
+color: red;
+}
+
+nav>ul>li>ul>li{
+position: relative;
+background-color: #5F5F54;
+}
+
+nav>ul>li:hover>ul {
+display: block;
+}
+
+nav>ul>li>ul>li>ul>li {
+background-color: #78786A;
+padding: 5px;
+}
+
+nav>ul>li>ul {
+position: absolute;
+top: 100%;
+left: 0;
+display: none;
+width: 100%;
+}
+
+nav>ul>li>ul>li:hover>ul {
+display: block;
+}
+
+nav>ul>li>ul>li>ul {
+position: absolute;
+left: 100%;
+top: 0;
+display:none;
+}
+
+</style>
+  
+<body>
+  
+    <nav>
+        <ul>
+          <li><a href="cap.html">Capstone: Project 4</a></li>
+          <li><a href="tutorial.html">Tutorial</a></li>
+          <li><a href="manual.html">Manual</a></li>
+          
+          <li><a href="#">3D Models</a>
+           <ul>
+              <li><a href="#">Large Models</a>
+              <ul>
+               <li><a href="#">Vehicles</a></li>
+               <li><a href="#">Buildings</a></li>
+               <li><a href="#">Infrastructure</a></li>
+               <li><a href="#">Parks and Recreation</a></li>
+               <li><a href="#">Animals</a></li>
+          </ul>
+          </li>
+
+          <li><a href="#">Small Models</a>
+          <ul>
+              <li><a href="#">Vehicles</a></li>
+              <li><a href="#">Buildings</a></li>
+              <li><a href="#">Infrastructure</a></li>
+              <li><a href="#">Parks and Recreation</a></li>
+              <li><a href="#">Animals</a></li>
+        </ul>
+          </li>
+        </ul>
+          </li>
+          
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+         </nav>
+        
+<div class="w3-container">
+  
+ 
+</div>
+
+<div class="w3-row" style="border:1px solid black;">
+        <div class="w3-container">
+        <div id="overlayHeader">
+                <h1>3D Plane</h1>
+                <hr/>
+                The De Havilland Canada DHC-1B2 Chipmunk plane<br/>
+                 was developed by the Royal Air Force <br/>
+                towards the end of WWII for training purposes. <br/>
+                It was commonly flown by U.S. aerobatic<br/>
+                 pilot Arthur Scholl. The Chipmunk’s first flight was on May 22nd, 1946.
+
+        </div>
+    
+
+
+<div id="mainNav">
+
+    Movements
+    
+    <hr></hr>
+    
+    <div id="buttonArea">
+        <table id="mouseTable">
+        <tr id="mouseLeftRow"><td><img src="img/Mouse_Left.png"></img></td><td id="mouseLeft">Rotate</td></tr>
+        <tr id="mouseRightRow"><td><img src="img/Mouse_Right.png"></img></td><td id="mouseRight">Zoom</td></tr>
+        <tr id="mouseWheelScrollRow"><td><img src="img/Mouse_Wheel_Scroll.png"></img></td><td id="mouseWheelScroll">Zoom</td></tr>
+        <tr id="mouseWheelPressRow"><td><img src="img/Mouse_Wheel_Press.png"></img></td><td id="mouseWheelPress">Pan</td></tr>
+        </table>
+    
+        <table id="buttonTable">
+        </table>
+    </div>
+</div>
+
+<div id="nonInteractive">
+    <h3>Non-interactive camera movement</h3>
+    <table>
+            <tr><td><div class='key'>r</div></td><td><div class='key'>a</div></td><td><div class='key'>u</div></td></tr>
+            <tr><td>Reset view</td><td>Show all</td><td>Upright view</td></tr>
+    </table>
+</div>
+    <!--CODY YOU SHOULD BE ABLE TO DROP YOUR X3D HERE-->
+      <X3D height='900px'> 
+            <scene>
+            <inline nameSpaceName="sh" mapDEFToID="true" url="x3d/small/SimpleHouse.x3d" />
+            </scene>
+        </x3d>
+    </div>
+    </div>
+
+        
+
+
+    </body>
+
+</html>
